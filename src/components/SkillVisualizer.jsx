@@ -94,8 +94,8 @@ export default function SkillVisualizer() {
           onChange={(e) => setSelectedChart(e.target.value)}
           className="px-4 py-2 rounded-lg bg-white/20 backdrop-blur-md text-white border border-white/30"
         >
-          <option value="skills">🧠 Skill Distribution</option>
-          <option value="certs">📈 Certificates Per Month</option>
+          <option className="bg-black" value="skills">🧠 Skill Distribution</option>
+          <option className="bg-black" value="certs">📈 Certificates Per Month</option>
         </select>
       </div>
 
