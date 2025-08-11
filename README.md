@@ -1,91 +1,85 @@
-project:
-  name: 🎓 CertiStore Pro – Certificate Management Platform
-  description: >
-    CertiStore Pro is a modern, elegant certificate management tool built for IT professionals. 
-    With secure authentication, animated visuals, and smart skill tracking, it helps users upload, 
-    view, and analyze their professional certificates — all in one place.
 
-  repository: https://github.com/amankumarjha71391/certistore-pro
-  license: MIT
-  author: Aman Kumar Jha
-  year: 2025
+````markdown
+🎓 CertiStore Pro – Certificate Management Platform
 
-overview:
-  title: CertiStore Pro
-  summary: >
-    CertiStore Pro simplifies certification tracking by enabling secure uploads, skill extraction,
-    and animated visualization with user-friendly UI and Supabase backend integration.
+Author: Aman Kumar Jha  
+Year: 2025  
+Repository: (https://github.com/amankumarjha71391/certistore-pro)
 
-features:
-  - 🔐 User Authentication via Supabase (email/password)
-  - 📤 Upload & Manage Certificates (PDF/Image)
-  - 🗃 Certificate Gallery with Edit/Delete
-  - 📊 Skill Visualizer using Recharts
-  - 🧊 Glassmorphism UI on Vanta.NET background
-  - 📱 Fully Mobile-Responsive UI with Hamburger Menu
-  - 🔁 Password Reset & Update Flow
-  - 🔒 Protected Routes for Authenticated Users
-  - ↪️ Auto Redirects on Login/Logout
-  - 🎯 Session Listener for Real-Time State Sync
+📌 Overview
 
-tech_stack:
-  frontend:
-    - React (with Vite)
-    - Tailwind CSS
-    - Recharts
-    - Vanta.js (NET animation)
-  backend:
-    - Supabase (Auth, DB, Storage)
+CertiStore Pro is a modern, elegant certificate management tool built for IT professionals.  
+With secure authentication, animated visuals, and smart skill tracking, it helps users:
 
-setup:
-  prerequisites:
-    - Node.js (>=18.x)
-    - Supabase project (with anon/public key)
-  installation:
-    - git clone https://github.com/amankumarjha71391/certistore-pro
-    - cd certistore-pro
-    - npm install
-  env_config:
-    - Create `.env` in root with:
-      - VITE_SUPABASE_URL=https://your-project.supabase.co
-      - VITE_SUPABASE_ANON_KEY=your-anon-key
-  start_server: npm run dev
-  dev_url: http://localhost:5173
+- Upload professional certificates (PDF/Image)
+- Organize them in a secure gallery
+- Extract and visualize skill data  
+— all in one place.
 
-routes:
-  - path: /
-    type: protected
-    description: Certificate upload page
-  - path: /gallery
-    type: protected
-    description: View/edit uploaded certificates
-  - path: /skills
-    type: protected
-    description: Visualize recurring skills
-  - path: /auth
-    type: public
-    description: Login / Signup / Forgot Password
-  - path: /reset-password
-    type: public
-    description: Set new password from email link
-  - path: /login
-    redirect: /auth
+Built with React, Tailwind CSS, Supabase, and Recharts** for speed, security, and style.
 
-deployment:
-  platforms:
-    - Netlify
-  env_notes: >
-    Add the `.env` keys (Supabase URL and Anon Key) using each platform’s environment variables UI.
+✨ Features
 
-developer_notes:
-  - Supabase stores files in `certificates` bucket.
-  - Metadata is stored in `certificates` table with title, company, skills, file_url, and user_id.
-  - Skill Visualizer aggregates uploaded skill tags.
-  - ProtectedRoute is a reusable component for guarding authenticated routes.
-  - Hamburger menu toggles using local state and is responsive on small screens.
+- 🔐 **User Authentication** (via Supabase Email/Password)
+- 📤 **Upload & Manage Certificates** (PDF/Image support)
+- 🗃 **Certificate Gallery** (Edit/Delete capabilities)
+- 📊 **Skill Visualizer** using Recharts
+- 🧊 **Glassmorphism UI** with Vanta.NET animated background
+- 📱 **Mobile-Responsive Design** with Hamburger Menu
+- 🔁 **Password Reset & Update** Flow
+- 🔒 **Protected Routes** for authenticated users
+- ↪️ **Auto Redirects** on Login/Logout
+- 🎯 **Session Listener** for real-time authentication state sync
 
+🛠 Tech Stack
 
-license:
-  type: MIT
-  author: Aman Kumar Jha
-  year: 2025
+Frontend:
+- React (Vite)
+- Tailwind CSS
+- Recharts
+- Vanta.js (NET animation)
+
+Backend:
+- Supabase (Auth, Database, Storage)
+
+🚀 Getting Started
+
+Prerequisites
+- Node.js v18+
+- A Supabase project with **Anon/Public Key**
+
+Installation
+
+git clone https://github.com/amankumarjha71391/certistore-pro
+cd certistore-pro
+npm install
+
+Environment Variables
+
+Create a `.env` file in the project root:
+
+VITE_SUPABASE_URL=https://your-project.supabase.co
+VITE_SUPABASE_ANON_KEY=your-anon-key
+
+Start Development Server
+
+npm run dev
+
+Visit: [http://localhost:5173]
+
+🗺 Routes
+
+| Path              | Type      | Description                        |
+| ----------------- | --------- | ---------------------------------- |
+| `/`               | Protected | Certificate upload page            |
+| `/gallery`        | Protected | View & edit uploaded certificates  |
+| `/skills`         | Protected | Visualize recurring skills         |
+| `/auth`           | Public    | Login / Signup / Forgot Password   |
+| `/reset-password` | Public    | Set a new password from email link |
+| `/login`          | Redirect  | Redirects to `/auth`               |
+
+📦 Deployment
+
+Platform: Netlify
+
+Add your `.env` keys in the platform’s environment variable settings.
